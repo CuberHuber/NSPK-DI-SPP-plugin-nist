@@ -1,29 +1,21 @@
-# This plugin processes <File | Native | Another> source
-# Link: <link to source website>
+# This plugin processes Native source
+# Link: https://www.nist.gov/news-events/news
 # Author:
-#	Ф.И.О
+#	Лупашко Р., Соловьев И.
 #	NSPK DI
 
-SOURCE <source name>
+SOURCE nist
 
 # Тут указывается имя файла с парсером
-PARSER source_parser
+PARSER nist
 
 SETENV LogMode debug
 
-# Этот параметр нужен, если ты имеешь дело с противным источником.
-BUS_ADD s_download PARSER/SOURCE_PARSER_CLASS/nasty_download
-
 # Тут указывается класс парсера и метод, который платформа будет вызывать
-START SOURCE_PARSER_CLASS content
-
-
-# Такая конфигурация модулей подходит для "файловых противных источников"
-ADD FilterOnlyNewDocumentWithDB
-ADD DownloadDocumentsThroughSeleniumTemp
-ADD ExtractTextFromFile
-ADD UploadDocumentToDB
+START NIST content
 
 # Такая конфигурация модулей подходит для "Нативных источников"
 ADD FilterOnlyNewDocumentWithDB
 ADD UploadDocumentToDB
+
+
