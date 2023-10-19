@@ -19,7 +19,7 @@ class NIST:
     Класс парсера плагина SPP
 
     :source: nist
-    :link: https://www.nist.gov/news-events/news
+    :link: https://www.nist.gov/news-events/news1
 
     :warning Все необходимое для работы парсера должно находится внутри этого класса
 
