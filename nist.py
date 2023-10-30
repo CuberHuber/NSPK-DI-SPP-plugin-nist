@@ -11,7 +11,7 @@ import dateutil.parser
 import re
 from bs4 import BeautifulSoup
 
-from spp_document import SPP_document
+from src.spp.types import SPP_document
 
 
 class NIST:
